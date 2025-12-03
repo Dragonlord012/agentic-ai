@@ -6,7 +6,7 @@ This project uses the **Google Agent Development Kit (ADK)** to enforce a "Zero-
 
 ---
 
-##  Tech Stack & Components
+Tech Stack & Components
 
 
 Model
