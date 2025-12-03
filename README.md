@@ -8,13 +8,21 @@ This project uses the **Google Agent Development Kit (ADK)** to enforce a "Zero-
 
 ## Tech Stack & Components
 
-Model:	
-gemini-2.0-flash,	The fastest reasoning model available; critical for minimizing latency during the retry loops.
-Framework:
-google-adk ,Google's Agent Development Kit provides the structured Agent, Tool, and Runner classes needed for complex orchestration.
-Search Tool:
-Google Search,	Provides Dynamic Retrieval, allowing the model to decide what to search for (e.g., "latest AI stats") rather than just matching keywords.
-Validation	Python grounding_chunks	We use direct metadata inspection to guarantee 100% truthful citations.
+Core Components
+
+Python 3.10+: The primary programming language used for the agent's logic, API orchestration, and strict validation scripts.
+
+Google Agent Development Kit (ADK): The framework that powers the agent's architecture. We use google-adk to define the Agent personas, manage Tool connections, and handle the execution runner loop.
+
+Gemini 2.0 Flash: The specific AI model selected for this project (gemini-2.0-flash). It was chosen for its sub-second latency and high-reasoning capabilities, which are critical for maintaining a smooth user experience during the automated retry loops.
+
+Tooling & Security
+
+Google Search Tool: Enables Dynamic Retrieval. Unlike standard RAG (Retrieval-Augmented Generation), this tool allows the model to autonomously decide when and what to search for on the live web to answer the user's specific request.
+
+Custom Grounding Validation: A specialized Python logic layer that physically inspects the grounding_metadata returned by the API. It ensures that no response is accepted unless it contains valid, clickable source links.
+
+Python-Dotenv: A security utility used to load the GOOGLE_API_KEY from a local .env file, ensuring credentials are never hardcoded into the source code
 ---
 
 ##  Key Features
