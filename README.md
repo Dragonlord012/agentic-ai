@@ -6,16 +6,15 @@ This project uses the **Google Agent Development Kit (ADK)** to enforce a "Zero-
 
 ---
 
-Tech Stack & Components
+## Tech Stack & Components
 
-
-Model
-gemini-2.0-flash,The fastest reasoning model available; critical for minimizing latency during the retry loops.
-Framework
-google-adk,"Google's Agent Development Kit provides the structured Agent, Tool, and Runner classes needed for complex orchestration."
-Search Tool
-Google Search,"Provides Dynamic Retrieval, allowing the model to decide what to search for (e.g., ""latest AI stats"") rather than just matching keywords."
-Validation,Python grounding_chunks,We use direct metadata inspection to guarantee 100% truthful citations.
+Model:	
+gemini-2.0-flash,	The fastest reasoning model available; critical for minimizing latency during the retry loops.
+Framework:
+google-adk ,Google's Agent Development Kit provides the structured Agent, Tool, and Runner classes needed for complex orchestration.
+Search Tool:
+Google Search,	Provides Dynamic Retrieval, allowing the model to decide what to search for (e.g., "latest AI stats") rather than just matching keywords.
+Validation	Python grounding_chunks	We use direct metadata inspection to guarantee 100% truthful citations.
 ---
 
 ##  Key Features
